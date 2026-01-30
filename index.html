@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Asım Adıgüzel</title>
+  <meta name="description" content="Asım Adıgüzel — Personal Landing Page." />
+  <style>
+    body{
+      margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:#0b0f17; color:#e9eef7;
+      padding: 28px;
+    }
+    .card{
+      width:min(560px, 100%);
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      padding:28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      backdrop-filter: blur(10px);
+    }
+    h1{ margin:0 0 6px; font-size:28px; letter-spacing:.2px; }
+    .sub{ margin:0 0 22px; color:rgba(233,238,247,.78); font-size:14px; line-height:1.5; }
+    .btn{
+      display:flex; align-items:center; justify-content:space-between;
+      text-decoration:none;
+      color:#0b0f17;
+      background:#ffffff;
+      padding:14px 16px;
+      border-radius:12px;
+      margin:10px 0;
+      font-weight:650;
+      transition: transform .08s ease, opacity .08s ease;
+    }
+    .btn:hover{ transform: translateY(-1px); opacity:.95; }
+    .btn.secondary{
+      background:rgba(255,255,255,.10);
+      color:#e9eef7;
+      border:1px solid rgba(255,255,255,.16);
+    }
+    .btn.disabled{
+      opacity:.55;
+      cursor:not-allowed;
+      pointer-events:none;
+    }
+    .hint{
+      margin-top:16px;
+      font-size:12px;
+      color:rgba(233,238,247,.55);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Asım Adıgüzel</h1>
+    <p class="sub">Export Incentives · Public Affairs · Policy & Industry</p>
+
+    <a class="btn" href="https://www.linkedin.com/in/asimadiguzel/" target="_blank" rel="noopener">
+      LinkedIn <span>↗</span>
+    </a>
+
+    <a class="btn secondary" href="mailto:adiguzel@gmail.com">
+      adiguzel@gmail.com <span>→</span>
+    </a>
+
+    <a class="btn disabled" href="#" aria-disabled="true" title="CV">
+      CV (yakında) <span>⏳</span>
+    </a>
+
+    <div class="hint">© <span id="y"></span> adgzl.com</div>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
