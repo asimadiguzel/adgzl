@@ -85,6 +85,15 @@
       color:#000;
     }
 
+    /* Mail icon: slightly more visible but still subtle */
+    .icon-link.mail{
+      background:#f7f8f9; /* ~5% contrast */
+    }
+
+    .icon-link.mail:hover{
+      background:#eef0f2;
+    }
+
     svg{
       width:18px;
       height:18px;
@@ -128,7 +137,7 @@
         </a>
 
         <!-- Email -->
-        <a class="icon-link" id="contactLink" href="#" aria-label="Email">
+        <a class="icon-link mail" id="contactLink" href="#" aria-label="Email">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M2 6.5C2 5.67 2.67 5 3.5 5h17c.83 0 1.5.67 1.5 1.5v11c0 .83-.67 1.5-1.5 1.5h-17C2.67 20 2 19.33 2 18.5v-12zM4.2 7.2l7.3 5.2c.3.21.7.21 1 0l7.3-5.2V7L12 12.6 4 7v.2z"/>
           </svg>
