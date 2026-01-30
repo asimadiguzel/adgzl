@@ -112,4 +112,24 @@
         <span>↗</span>
       </a>
 
-      <a class="btn btn-
+      <a class="btn btn-secondary" id="contactBtn" href="#">
+        Contact
+        <span>→</span>
+      </a>
+    </div>
+
+    <footer>
+      © <span id="y"></span> adgzl.com
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Contact button: mail works, address not shown as text
+    const u = "adiguzel";
+    const d = "gmail.com";
+    document.getElementById("contactBtn").href = "mailto:" + u + "@" + d;
+  </script>
+</body>
+</html>
