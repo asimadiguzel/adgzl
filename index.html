@@ -1,79 +1,115 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Asım Adıgüzel</title>
-  <meta name="description" content="Asım Adıgüzel — Personal Landing Page." />
+  <meta name="description" content="Asım Adıgüzel — Export Incentives, Public Affairs, Policy & Industry." />
+
   <style>
+    :root{
+      --bg:#0b0e14;
+      --card:#141824;
+      --text:#eaeaf0;
+      --muted:#a6adbb;
+      --accent:#ffffff;
+      --border:rgba(255,255,255,.08);
+    }
+
+    *{box-sizing:border-box}
     body{
-      margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:#0b0f17; color:#e9eef7;
-      padding: 28px;
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:radial-gradient(1200px 600px at 50% -10%, #1b2133 0%, var(--bg) 55%);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color:var(--text);
+      padding:24px;
     }
+
     .card{
-      width:min(560px, 100%);
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
-      border-radius:18px;
-      padding:28px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-      backdrop-filter: blur(10px);
+      width:100%;
+      max-width:520px;
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+      background-color:var(--card);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:32px;
+      box-shadow:0 20px 60px rgba(0,0,0,.45);
     }
-    h1{ margin:0 0 6px; font-size:28px; letter-spacing:.2px; }
-    .sub{ margin:0 0 22px; color:rgba(233,238,247,.78); font-size:14px; line-height:1.5; }
+
+    h1{
+      margin:0;
+      font-size:28px;
+      font-weight:600;
+      letter-spacing:.2px;
+    }
+
+    .subtitle{
+      margin-top:8px;
+      font-size:14px;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
+    .actions{
+      margin-top:28px;
+      display:grid;
+      gap:14px;
+    }
+
     .btn{
-      display:flex; align-items:center; justify-content:space-between;
-      text-decoration:none;
-      color:#0b0f17;
-      background:#ffffff;
-      padding:14px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 18px;
       border-radius:12px;
-      margin:10px 0;
-      font-weight:650;
-      transition: transform .08s ease, opacity .08s ease;
+      text-decoration:none;
+      font-weight:500;
+      font-size:15px;
+      border:1px solid var(--border);
+      transition:transform .08s ease, background .08s ease, border .08s ease;
     }
-    .btn:hover{ transform: translateY(-1px); opacity:.95; }
-    .btn.secondary{
-      background:rgba(255,255,255,.10);
-      color:#e9eef7;
-      border:1px solid rgba(255,255,255,.16);
+
+    .btn-primary{
+      background:var(--accent);
+      color:#0b0e14;
+      border-color:transparent;
     }
-    .btn.disabled{
-      opacity:.55;
-      cursor:not-allowed;
-      pointer-events:none;
+
+    .btn-secondary{
+      background:transparent;
+      color:var(--text);
     }
-    .hint{
-      margin-top:16px;
+
+    .btn:hover{
+      transform:translateY(-1px);
+      border-color:rgba(255,255,255,.2);
+    }
+
+    footer{
+      margin-top:28px;
       font-size:12px;
-      color:rgba(233,238,247,.55);
+      color:rgba(255,255,255,.35);
     }
   </style>
 </head>
+
 <body>
   <main class="card">
     <h1>Asım Adıgüzel</h1>
-    <p class="sub">Export Incentives · Public Affairs · Policy & Industry</p>
+    <div class="subtitle">
+      Export Incentives · Public Affairs · Policy & Industry
+    </div>
 
-    <a class="btn" href="https://www.linkedin.com/in/asimadiguzel/" target="_blank" rel="noopener">
-      LinkedIn <span>↗</span>
-    </a>
+    <div class="actions">
+      <a class="btn btn-primary"
+         href="https://www.linkedin.com/in/asimadiguzel/"
+         target="_blank" rel="noopener">
+        LinkedIn
+        <span>↗</span>
+      </a>
 
-    <a class="btn secondary" href="mailto:adiguzel@gmail.com">
-      adiguzel@gmail.com <span>→</span>
-    </a>
-
-    <a class="btn disabled" href="#" aria-disabled="true" title="CV">
-      CV (yakında) <span>⏳</span>
-    </a>
-
-    <div class="hint">© <span id="y"></span> adgzl.com</div>
-  </main>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+      <a class="btn btn-
